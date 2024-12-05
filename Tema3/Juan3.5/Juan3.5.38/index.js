@@ -8,6 +8,7 @@ Promise.resolve().then(() => {
     console.log('✨ Promesa 1');
     setTimeout(() => console.log('⏰ Timeout dentro de promesa'), 0);
 });
+//Añadido el uso de async y reject
 Promise.resolve().then(async () => {
     console.log('💫 Promesa 2');
     try {
