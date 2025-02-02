@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .producto {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+        }
+        .producto img {
+            max-width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="buscar">Introduce URL del producto de Amazon:</label>
+                    <input type="text" class="form-control" id="buscar" placeholder="Ingresa la URL">
+                </div>
+                <button id="buscarBtn" class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h3>Resultado de Amazon</h3>
+                <div id="resultadoAmazon"></div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h3>Resultados de Bing</h3>
+                <div id="resultadosBing"></div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
