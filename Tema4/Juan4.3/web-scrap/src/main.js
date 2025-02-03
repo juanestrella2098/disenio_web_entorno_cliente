@@ -3,6 +3,12 @@ $(document).ready(function () {
   $("#buscarBtn").on('click', function () {
     const url = $('#buscar').val();
     if (url) {
+      let busquedas = [];
+    if(localStorage.getItem('busquedas') != null){
+      busquedas = JSON.parse(localStorage.getItem('busquedas'));
+    } 
+      busquedas.push(`http://localhost:3000/scrape?url=${encodeURIComponent(url)}`);
+      localStorage.setItem('busquedas', JSON.stringify(busquedas));
       $.ajax({
         url: `http://localhost:3000/scrape?url=${encodeURIComponent(url)}`,
         method: 'GET',
