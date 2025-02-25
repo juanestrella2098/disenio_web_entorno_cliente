@@ -48,13 +48,16 @@ async function scrapeBing(title) {
     const browser = await puppeteer.launch({
         headless: true
     });
+
     title = title.split(' ').slice(0, 3).join('-');
     const page = await browser.newPage();
 
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36');
 
     await page.goto(`https://www.bing.com/shop?q=${title}`);
+    
     await page.waitForSelector('#br-paidOffersGrid');
+
     const results = await page.evaluate(() => {
         return Array.from(document.querySelectorAll('li.br-item')).map((list, index) => ({
             position: index + 1,
