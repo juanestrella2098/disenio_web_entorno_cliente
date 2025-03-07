@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Preferencias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Gestor de Preferencias</h1>
+        <div id="configSection">
+            <h2>Configuraciones</h2>
+            <div>
+                <label for="themeSelector">Tema:</label>
+                <select id="themeSelector">
+                    <option value="light">Claro</option>
+                    <option value="dark">Oscuro</option>
+                </select>
+            </div>
+            <div>
+                <label for="fontSizeSelector">Tamaño de Fuente:</label>
+                <select id="fontSizeSelector">
+                    <option value="small">Pequeña</option>
+                    <option value="medium">Media</option>
+                    <option value="large">Grande</option>
+                </select>
+            </div>
+            <div>
+                <label for="languageSelector">Idioma:</label>
+                <select id="languageSelector">
+                    <option value="es">Español</option>
+                    <option value="en">Inglés</option>
+                </select>
+            </div>
+            <button id="savePreferences">Guardar Preferencias</button>
+            <button id="resetPreferences">Restaurar Predeterminadas</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
